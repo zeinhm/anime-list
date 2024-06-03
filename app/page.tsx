@@ -8,6 +8,7 @@ import { useState } from "react";
 import useDebounce from "@/hooks/useDebounce";
 import Input from "@/components/atoms/Input";
 import { SearchIcon } from "@/components/icons";
+import StaticJumbotron from "@/components/molecules/StaticJumbotron";
 
 export default function Home() {
   const [page, setPage] = useState(1);
@@ -32,6 +33,7 @@ export default function Home() {
     <div className="p-16 pt-0 grid grid-cols-5">
       <div className="col-start-2 col-span-3">
         <div className="py-8 text-2xl font-bold">WebAnimeFlix</div>
+        <StaticJumbotron />
         <form className="my-8" onSubmit={handleSearch}>
           <Input
             type="text"
