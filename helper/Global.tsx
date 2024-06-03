@@ -1,3 +1,16 @@
+export const debounce = <T extends any[]>(
+  func: (...args: T) => void,
+  delay: number
+): ((this: any, ...args: T) => void) => {
+  let timer: NodeJS.Timeout;
+  return function (this: any, ...args: T) {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+};
+
 export const serializeParams = (params: { [key: string]: any }) => {
   const queryParams: string[] = [];
 
