@@ -17,6 +17,10 @@ body {
   @apply text-gray-200;
 }
 
+.animate-shimmer {
+  @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_1.5s_infinite] before:bg-gradient-to-r before:from-transparent before:via-[#252525] before:to-transparent;
+}
+
 .bg-darken-vertical {
   background: linear-gradient(0deg, rgba(0,0,0,0.85) 15%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0.1) 60%);
 }
