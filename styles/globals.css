@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+  }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  @apply text-gray-200;
+}
+
+.bg-darken-vertical {
+  background: linear-gradient(0deg, rgba(0,0,0,0.85) 15%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0.1) 60%);
+}
+
