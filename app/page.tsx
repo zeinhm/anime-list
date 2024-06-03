@@ -9,6 +9,7 @@ import useDebounce from "@/hooks/useDebounce";
 import Input from "@/components/atoms/Input";
 import { SearchIcon } from "@/components/icons";
 import StaticJumbotron from "@/components/molecules/StaticJumbotron";
+import Pagination from "@/components/molecules/Pagination";
 
 export default function Home() {
   const [page, setPage] = useState(1);
@@ -20,6 +21,10 @@ export default function Home() {
       queryKey: ["animes", page, debouncedSearch],
       queryFn: () => fetchAnimes({ q: debouncedSearch, page, limit: 10 }),
     });
+
+  const handlePageClick = (data: { selected: number }) => {
+    setPage(data.selected + 1);
+  };
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -44,7 +49,16 @@ export default function Home() {
           />
         </form>
         {data ? (
-          <AnimeList animes={data.data} />
+          <>
+            <AnimeList animes={data.data} />
+            <Pagination
+              pageCount={Math.ceil(
+                data.pagination.items.total / data.pagination.items.per_page
+              )}
+              onPageChange={(e) => handlePageClick(e)}
+              page={page - 1}
+            />
+          </>
         ) : (
           <div className="pl-4 text-gray-200">No relevant results found</div>
         )}
