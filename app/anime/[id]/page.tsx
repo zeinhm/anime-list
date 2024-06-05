@@ -54,7 +54,7 @@ const AnimeDetail = () => {
       </div>
       <div className="relative ml-4 sm:ml-16 p-4 pl-0 sm:p-8 sm:pl-0">
         <div className="lg:-mt-[20%]">
-          <div className="flex flex-col max-w-[300px] gap-4">
+          <div className="flex flex-col max-w-[350px] gap-4">
             <div className="text-nowrap text-2xl font-bold flex items-center">
               {anime.title}
             </div>
@@ -74,7 +74,7 @@ const AnimeDetail = () => {
                 </div>
               ))}
             </div>
-            <div className="text-sm">
+            <div className="text-sm line-clamp-[6]">
               <span className=" text-[#757575]">Description:</span>{" "}
               {anime.background}
             </div>
