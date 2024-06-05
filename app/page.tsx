@@ -22,7 +22,7 @@ export default function Home() {
   const { data, isLoading, isError }: UseQueryResult<AnimesResponseTypes> =
     useQuery({
       queryKey: ["animes", page, debouncedSearch],
-      queryFn: () => fetchAnimes({ q: debouncedSearch, page, limit: 10 }),
+      queryFn: () => fetchAnimes({ q: debouncedSearch, page, limit: 20 }),
     });
 
   const handlePageClick = (data: { selected: number }) => {
