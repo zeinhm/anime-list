@@ -24,8 +24,8 @@ const Pagination: React.FC<PaginationProps> = ({
       renderOnZeroPageCount={null}
       containerClassName={"text-gray-200 flex gap-4 w-full justify-center mt-8"}
       pageClassName="min-w-[30px]"
-      pageLinkClassName="bg-[#161616] rounded py-1 px-2 text-sm flex justify-center"
-      activeLinkClassName={"!bg-[#282828] rounded "}
+      pageLinkClassName="bg-primary rounded py-1 px-2 text-sm flex justify-center"
+      activeLinkClassName={"!bg-secondary rounded "}
     />
   );
 };

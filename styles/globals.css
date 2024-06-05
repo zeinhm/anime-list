@@ -25,8 +25,8 @@ body {
   background: linear-gradient(0deg, rgba(0,0,0,0.85) 15%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0.1) 60%);
 }
 
-.bg-darken-bottom-left {
-  background: linear-gradient(45deg, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0) 60%);
+.bg-darken-horizontal {
+  background: linear-gradient(90deg, rgba(0,0,0,0.85) 15%, rgba(0,0,0,0.75) 25%, rgba(0,0,0,0.65) 40%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.05) 80%);
 }
 
 .input-text-wrapper {
@@ -34,7 +34,7 @@ body {
 }
 
 .input-text {
-  @apply w-full h-14 rounded-2xl px-4 py-2 text-sm bg-[#161616] text-gray-200 focus:outline-0 ;
+  @apply w-full h-14 rounded-2xl px-4 py-2 text-sm bg-primary text-gray-200 focus:outline-0 ;
 }
 
 .input-text::placeholder {

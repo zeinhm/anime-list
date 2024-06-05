@@ -13,10 +13,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: "#161616",
+        secondary: "#212121",
+      },
       keyframes: {
         shimmer: {
-          '100%': {
-            transform: 'translateX(100%)',
+          "100%": {
+            transform: "translateX(100%)",
           },
         },
       },

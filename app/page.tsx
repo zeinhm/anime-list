@@ -30,8 +30,8 @@ export default function Home() {
   };
 
   return (
-    <div className="p-16 pt-0 grid grid-cols-5">
-      <div className="col-start-2 col-span-3">
+    <div className="p-4 pt-0 md:p-16 md:pt-0 grid grid-cols-1 md:grid-cols-5">
+      <div className="md:col-start-2 col-span-3">
         <div className="py-8 text-2xl font-bold">WebAnimeFlix</div>
         <StaticJumbotron />
         <Input
@@ -51,7 +51,7 @@ export default function Home() {
           ) : (
             <>
               {isError ? (
-                <div className="text-gray-200">
+                <div className="text-sm">
                   The server encountered error and could not complete your
                   request. Please try again later
                 </div>
@@ -70,7 +70,7 @@ export default function Home() {
                       />
                     </>
                   ) : (
-                    <div className="pl-4 text-gray-200">
+                    <div className="pl-4 text-sm">
                       No relevant results found
                     </div>
                   )}
