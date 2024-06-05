@@ -29,25 +29,22 @@ export default function Home() {
     setPage(data.selected + 1);
   };
 
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setPage(1);
-  };
-
   return (
     <div className="p-16 pt-0 grid grid-cols-5">
       <div className="col-start-2 col-span-3">
         <div className="py-8 text-2xl font-bold">WebAnimeFlix</div>
         <StaticJumbotron />
-        <form className="my-8" onSubmit={handleSearch}>
-          <Input
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search for an anime..."
-            icon={<SearchIcon className="text-gray-400" />}
-          />
-        </form>
+        <Input
+          type="text"
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setPage(1);
+          }}
+          placeholder="Search for an anime..."
+          icon={<SearchIcon className="text-gray-400" />}
+          className="my-8"
+        />
         <div className="min-h-[420px]">
           {isLoading ? (
             <AnimeCardSkeleton />
