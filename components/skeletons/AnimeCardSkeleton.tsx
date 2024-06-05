@@ -4,7 +4,7 @@ export default function AnimeCardSkeleton() {
       {Array.from({ length: 10 }).map((_, i) => (
         <div
           key={`my-order-list-${i}-shimmer`}
-          className="flex flex-col bg-primary rounded-xl shadow-lg overflow-hidden animate-shimmer"
+          className="flex flex-col bg-[#161616] rounded-xl shadow-lg overflow-hidden animate-shimmer"
         >
           <div className="flex flex-col items-center gap-6 text-sm">
             <div className="h-[180px] w-full bg-[#212121] animate-pulse"></div>

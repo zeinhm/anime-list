@@ -59,6 +59,13 @@ export interface AnimeDataTypes {
     youtube_id: string;
     url: string;
     embed_url: string;
+    images: {
+      image_url: string;
+      large_image_url: string;
+      maximum_image_url: string;
+      medium_image_url: string;
+      small_image_url: string;
+    };
   };
   approved: true;
   titles: [
@@ -179,4 +186,8 @@ export interface AnimesResponseTypes {
       per_page: number;
     };
   };
+}
+
+export interface AnimeDetailResponseTypes {
+  data: AnimeData;
 }

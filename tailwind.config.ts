@@ -14,8 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primary: "#161616",
-        secondary: "#212121",
+        primary: "#212121",
+        secondary: "#56575B",
       },
       keyframes: {
         shimmer: {
